@@ -1,155 +1,159 @@
 # 🖥️ Wiki Informatique
 
-> 🎯 *Centre de connaissances – Systèmes, Virtualisation & Containerisation*
+Bienvenue sur le wiki technique dédié à l’administration système, la virtualisation et la containerisation.
+Ce wiki centralise les connaissances, procédures et bonnes pratiques autour de l’infrastructure IT.
 
 ---
 
-## 🚀 Accès rapide
+## 📚 Domaines de compétences
 
-| 🪟 Systèmes                | 🖥️ Virtualisation | 🐳 Containers        | 📊 Monitoring  | 🔐 Sécurité          |
-| -------------------------- | ------------------ | -------------------- | -------------- | -------------------- |
-| [[Administration Windows]] | [[Proxmox]]        | [[Containerisation]] | [[Monitoring]] | [[Sécurité]]         |
-| [[Administration Linux]]   | [[Stockage]]       | [[Reverse Proxy]]    | [[Logs]]       | [[Authentification]] |
+### 🪟 Administration Windows & 🐧 Linux
 
----
+Gestion et exploitation des systèmes d’exploitation en environnement professionnel et homelab.
 
-## 🪟🐧 Systèmes
+#### 🔧 Systèmes Windows
 
-> Administration et gestion des environnements Windows & Linux
+* Active Directory (AD DS)
+* GPO & gestion des stratégies
+* DNS / DHCP
+* Gestion des utilisateurs & groupes
+* PowerShell & automatisation
+* Sécurité (LAPS, durcissement, audit)
 
-| 🔧 Domaine       | 📌 Contenu                          |
-| ---------------- | ----------------------------------- |
-| Active Directory | GPO, LDAP, DNS, DHCP                |
-| Windows Server   | Administration, sécurité, scripting |
-| Linux            | Debian, services, sécurité          |
-| Automatisation   | PowerShell, Bash                    |
+#### 🐧 Systèmes Linux
 
-➡️ [[Administration Windows]]
-➡️ [[Administration Linux]]
+* Administration Debian / Ubuntu
+* Gestion des paquets (`apt`, `dpkg`)
+* Gestion des services (`systemd`)
+* Authentification (LDAP, Kerberos)
+* Sécurisation (SSH, firewall, fail2ban)
+* Scripting (Bash)
 
----
+👉 Accéder à la documentation :
 
-## 🖥️ Virtualisation (Proxmox)
-
-> Infrastructure et gestion des ressources
-
-| ⚙️ Élément  | 📌 Contenu            |
-| ----------- | --------------------- |
-| Hyperviseur | Installation, cluster |
-| Stockage    | ZFS, NFS, PBS         |
-| Réseau      | Bridge, VLAN          |
-| VM / LXC    | Déploiement & gestion |
-
-➡️ [[Proxmox]]
-➡️ [[Stockage]]
+* [[Administration Windows]]
+* [[Administration Linux]]
 
 ---
 
-## 🐳 Containerisation
+### 🖥️ Virtualisation & Infrastructure (Proxmox)
 
-> Déploiement d’applications modernes
+Gestion de l’infrastructure virtualisée avec Proxmox VE.
 
-| 📦 Outils       | 📌 Usage             |
-| --------------- | -------------------- |
-| Docker / Podman | Conteneurs           |
-| Compose         | Orchestration simple |
-| Portainer       | Gestion UI           |
-| Images          | Build & registry     |
+#### ⚙️ Hyperviseur
 
-➡️ [[Containerisation]]
+* Installation & configuration Proxmox
+* Gestion des clusters
+* Stockage (ZFS, NFS, PBS)
+* Réseau (bridge, VLAN, bonding)
 
----
+#### 📦 Machines Virtuelles & Conteneurs
 
-## 🌐 Reverse Proxy & Accès
+* Création et gestion des VM
+* LXC vs VM
+* Backup & restauration
+* Haute disponibilité (HA)
 
-> Exposition sécurisée des services
+#### 📊 Supervision & performances
 
-| 🔧 Outil  | 📌 Fonction             |
-| --------- | ----------------------- |
-| Traefik   | Reverse proxy dynamique |
-| BunkerWeb | WAF & sécurité          |
-| TLS / PKI | Certificats             |
+* Monitoring (Zabbix, Grafana)
+* Optimisation ressources CPU/RAM/IO
+* Analyse des performances
 
-➡️ [[Reverse Proxy]]
+👉 Accéder à la documentation :
 
----
-
-## 📊 Monitoring & Logs
-
-> Supervision et analyse
-
-| 📈 Outil   | 📌 Fonction    |
-| ---------- | -------------- |
-| Grafana    | Visualisation  |
-| Prometheus | Metrics        |
-| Zabbix     | Supervision    |
-| Logs       | Centralisation |
-
-➡️ [[Monitoring]]
-➡️ [[Logs]]
+* [[Proxmox]]
+* [[Monitoring]]
 
 ---
 
-## 🔐 Sécurité & Authentification
+### 🐳 Containerisation
 
-> Protection des systèmes et des accès
+Déploiement et gestion d’applications conteneurisées.
 
-| 🔒 Domaine       | 📌 Contenu       |
-| ---------------- | ---------------- |
-| Authentification | LDAP, OIDC, SSO  |
-| Accès            | Authelia         |
-| Secrets          | Vaultwarden      |
-| Hardening        | Bonnes pratiques |
+#### 📦 Outils
 
-➡️ [[Sécurité]]
-➡️ [[Authentification]]
+* Docker
+* Podman
+* Docker Compose / Stack
+* Portainer
 
----
+#### 🔐 Sécurité & bonnes pratiques
 
-## 🧰 Stack utilisée
+* Gestion des utilisateurs (rootless)
+* Isolation des services
+* Gestion des secrets
+* Mise à jour des images
 
-```mermaid
-graph TD
-    PX[Proxmox] --> CT[Containers]
-    CT --> TR[Traefik]
-    CT --> BW[BunkerWeb]
-    CT --> VW[Vaultwarden]
-    CT --> GRAF[Grafana]
-    CT --> ZBX[Zabbix]
-    PX --> PBS[Backup Server]
-    PX --> NAS[TrueNAS]
-```
+#### 🌐 Reverse Proxy & exposition
 
----
+* Traefik
+* BunkerWeb
+* Gestion TLS (ACME, PKI interne)
 
-## ⚡ Bonnes pratiques
+#### 🔄 CI/CD & automatisation
 
-* 🔄 Maintenir les systèmes à jour
-* 🔐 Sécuriser les accès (SSO, MFA)
-* 📦 Standardiser les déploiements
-* 🧪 Tester en pré-production
-* 💾 Mettre en place des sauvegardes fiables
+* Déploiement automatisé
+* Versioning des configurations
+* GitOps
 
-➡️ [[Bonnes pratiques]]
+👉 Accéder à la documentation :
+
+* [[Containerisation]]
+* [[Reverse Proxy]]
+* [[Sécurité]]
 
 ---
 
-## 📌 Navigation rapide
+## 🧰 Outils & Services
 
+* 🔐 Gestion des mots de passe : Vaultwarden
+* 📊 Monitoring : Grafana / Prometheus / Zabbix
+* 📦 Stockage : TrueNAS
+* 🌐 Réseau : pfSense
+* 🔑 Authentification : Authelia / LDAP / OIDC
+
+---
+
+## 📖 Bonnes pratiques & standards
+
+* 🔒 Sécurité (durcissement, gestion des accès)
+* 🧾 Documentation & procédures
+* 🔄 Sauvegarde & PRA
+* 📦 Standardisation des déploiements
+* 🧪 Environnements de test / pré-production
+
+👉 Accéder à :
+
+* [[Bonnes pratiques]]
+* [[Sécurité]]
+* [[Sauvegarde]]
+
+---
+
+## 🚀 Objectifs du Wiki
+
+* Centraliser les connaissances techniques
+* Standardiser les pratiques
+* Faciliter le troubleshooting
+* Accélérer les déploiements
+* Capitaliser sur l’expérience
+
+---
+
+## 🔎 Navigation rapide
+
+* 📁 [[Administration Windows]]
+* 📁 [[Administration Linux]]
 * 📁 [[Proxmox]]
 * 📁 [[Containerisation]]
-* 📁 [[Reverse Proxy]]
 * 📁 [[Monitoring]]
+* 📁 [[Réseau]]
 * 📁 [[Sécurité]]
 
 ---
 
-## 📝 À propos
+## 📝 Notes
 
-> Ce wiki est conçu comme un **hub central de connaissances IT**, permettant de :
-
-* 📚 Documenter les procédures
-* ⚙️ Standardiser les configurations
-* 🚀 Accélérer les déploiements
-* 🧠 Capitaliser sur l’expérience
-
+> Ce wiki est évolutif.
+> Chaque section est amenée à être enrichie avec des procédures détaillées, retours d’expérience et bonnes pratiques.
