@@ -13,21 +13,6 @@
 
 ---
 
-## 🧭 Vue d’ensemble
-
-```mermaid
-flowchart LR
-    USER[👨‍💻 Utilisateur] --> SYS[🪟🐧 Systèmes]
-    SYS --> VIRT[🖥️ Proxmox]
-    VIRT --> CONT[🐳 Containers]
-    CONT --> RP[🌐 Reverse Proxy]
-    RP --> APP[📦 Applications]
-    APP --> MON[📊 Monitoring]
-    MON --> USER
-```
-
----
-
 ## 🪟🐧 Systèmes
 
 > Administration et gestion des environnements Windows & Linux
