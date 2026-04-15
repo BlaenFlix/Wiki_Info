@@ -34,7 +34,8 @@ Ce wiki centralise les connaissances, procédures et bonnes pratiques autour de 
 * 🪟 Windows Server
   * Active Directory
   * GPO
-  * DNS / DHCP
+  * [DNS](./Services_Reseau/Serveur_DNS/Windows/DNS.md)
+  * DHCP
   
 * 🐧 Linux
   * SSH
