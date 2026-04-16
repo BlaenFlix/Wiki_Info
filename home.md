@@ -31,16 +31,26 @@ Ce wiki centralise les connaissances, procédures et bonnes pratiques autour de 
 
 > Administration des OS et services de base
 
-* 🪟 Windows Server
-  * Active Directory
-  * GPO
-  * [DNS](./Services_Reseau/Serveur_DNS/Windows/DNS.md)
-  * DHCP
+* 🪟 Windows 
+  * Poste utilisateur
+    * Installation OS
+  * Server
+    * Installation OS
+    * **[Active Directory](./gestion_systeme/Windows/server/active_directory.md)**
+    * GPO
+    * **[DNS](./gestion_systeme/Windows/server/DNS.md)**
+    * **[DHCP](./gestion_systeme/Windows/server/DHCP.md)**
+  * [Gestion Stockage](./gestion_systeme/Windows/gestion_disque/Gestion%20des%20disques.md)
+  * **[Gestion Réseau](./gestion_systeme/Windows/gestion_reseau/Gestion%20Réseau.md)**
+  * **[Informations Machine](./gestion_systeme/Windows/inforation_machine/Récupération%20Informations%20machines.md)**
   
 * 🐧 Linux
   * SSH
   * Gestion utilisateurs
   * Services système
+  * Gestion Stockage
+  * Gestion Réseau
+  * Informations Machine
 
 * 🔑 Authentification
   * LDAP
@@ -66,10 +76,19 @@ Ce wiki centralise les connaissances, procédures et bonnes pratiques autour de 
 
 ## 🖥️ Infrastructure
 
-* Proxmox
+* Hypervision
 * Stockage (ZFS, TrueNAS)
-* Réseau (pfSense, VLAN)
+* Déploiement
 * Backup (PBS)
+
+---
+
+### 🌐 Réseau
+
+* **[Routage](./gestion_routeur/)** => à créer
+* pfSense
+* VLAN
+* Firewall
 
 ---
 
